@@ -1,4 +1,4 @@
-
+  {% load staticfiles %}
   <!doctype html>
   <html lang="en">
     <head>
@@ -9,7 +9,6 @@
       <meta name="generator" content="Jekyll v3.8.5">
       <title>Album | Hadi Foroozanfar</title>
 
-      <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
       <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,16 +36,15 @@
     <body>
       <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Hadi Foroozanfar</a>
+    <a class="navbar-brand" href="{% url 'home' %}">Hadi Foroozanfar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="#">Twitter</a>
-        <a class="nav-item nav-link" href="#">Resume</a>
-        <a class="nav-item nav-link" href="#">Blog</a>
-        <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-item nav-link active" href="http://twitter.com/ForoozanfarHadi">Twitter</a>
+        <a class="nav-item nav-link" href="{% static 'django-beginners-learn-web-development.pdf' %}">Resume</a>
+        <a class="nav-item nav-link" href="{% url 'allblog' %}">Blog</a>
       </div>
     </div>
   </nav>
@@ -61,6 +59,7 @@
         <p>
           <a href="#" class="btn btn-primary my-2">E-mial me</a>
         </p>
+        <img src="{% static 'alps-3840x2160-switzerland-mountains-clouds-5k-16936.jpg' %}" height="300" />
       </div>
     </section>
 
